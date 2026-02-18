@@ -1,252 +1,184 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Editorial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+	<style>
+    /* プロジェクト一覧の画像を一定の高さに揃える設定 */
+    #projects .posts article .image {
+        display: block;
+        height: 250px;             /* ここで画像の高さを固定します */
+        background-color: transparent; /* 余白部分の色（白） */
+        /* 背景色をサイトに馴染ませたい場合は #ffffff の代わりに transparent と書いてください */
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    #projects .posts article .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;       /* これが「比率を保ったまま枠に収める」魔法の記述です */
+    }
+</style>
+    <head>
+        <title>Nobuhito Kasahara - Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+        <div id="wrapper">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+                <div id="main">
+                        <div class="inner">
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Hi, I’m Editorial<br />
-											by HTML5 UP</h1>
-											<p>A free and fully responsive site template</p>
-										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
+                            <header id="header">
+                                    <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Portfolio</a>
+                                    <ul class="icons">
+                                        <li><a href="https://twitter.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                        <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    </ul>
+                                </header>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Erat lacinia</h2>
-									</header>
-									<div class="features">
+                            <section id="banner">
+                                    <div class="content">
+                                        <header>
+                                            <h1>Nobuhito Kasahara<br />
+                                            (笠原 暢仁)</h1>
+                                            <p>Graduate Student at Meiji University, FMS</p>
+                                        </header>
+                                        <p>明治大学院 先端数理科学研究科 先端メディアサイエンス専攻 (FMS) 宮下研究室の大学院生です。
+                                        HCI (Human-Computer Interaction) を専門とし、特にパフォーマンスモデル (Fitts' Law、Steering Law) や、味覚メディアの研究に取り組んでいます。</p>
+                                        <ul class="actions">
+                                            <li><a href="publications.html" class="button big">View Publications</a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="image object">
+                                        <img src="images/NobuhitoKasaharaIcon.jpg" alt="Profile Picture" />
+                                    </span>
+                                </section>
+
+                            <section>
+                                    <header class="major">
+                                        <h2>Research Interests</h2>
+                                    </header>
+                                    <div class="features">
+                                        <article>
+                                            <span class="icon solid fa-mouse-pointer"></span>
+                                            <div class="content">
+                                                <h3>Performance Modeling</h3>
+                                                <p>Fitts' LawやSteering Lawを用いたポインティング動作の操作時間予測モデル、およびDual Gaussian Distributionモデルを用いたポインティング成功率予測モデルに関する研究。</p>
+                                            </div>
+                                        </article>
 										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
+                                            <span class="icon solid fa-object-group"></span>
+                                            <div class="content">
+                                                <h3>UI & UX</h3>
+                                                <p>より直感的で使いやすいUI、より快適なUXを目指す。特に、画面端・画面角における高速かつ正確なポインティングに着目した研究。</p>
+                                            </div>
+                                        </article>
 										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
+                                            <span class="icon solid fa-vr-cardboard"></span>
+                                            <div class="content">
+                                                <h3>Virtual Reality</h3>
+                                                <p>仮想現実環境におけるユーザインターフェースの設計と評価に関する研究。</p>
+                                            </div>
+                                        </article>
+                                        <article>
+                                            <span class="icon solid fa-utensils"></span>
+                                            <div class="content">
+                                                <h3>Taste Media</h3>
+                                                <p>味覚ディスプレイの拡張として、カトラリー型味覚提示デバイスによる個人の好みやコンテクストに対応可能な味覚体験の拡張と実装に関する研究。</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+
+                            <section id="projects">
+                                    <header class="major">
+                                        <h2>Projects</h2>
+                                    </header>
+                                    <div class="posts">
 										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
+                                            <a href="#" class="image"><img src="images/SkewedDualGaussian_Thumbnail.png" alt="Skewed Gaussian Project" /></a>
+                                            <h3>Skewed Dual Gaussian Distribution Model</h3>
+                                            <p>画面端・画面角付近におけるタッチポインティングの成功率を予測する数理モデルに関する研究。</p>
+                                            <ul class="actions">
+                                                <li><a href="#" class="button">More</a></li>
+                                            </ul>
+                                        </article>
 										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
+                                            <a href="#" class="image"><img src="images/BiasTrajectory_Thumbnail.png" alt="Bias Trajectory Project" /></a>
+                                            <h3>Trajectory-Based Tasks with Subjective Speed-Accuracy Bias</h3>
+                                            <p>ユーザの主観的な速度と精度のバイアスの影響を考慮したクロッシング・ステアリングの操作時間を予測する数理モデルに関する研究。</p>
+                                            <ul class="actions">
+                                                <li><a href="#" class="button">More</a></li>
+                                            </ul>
+                                        </article>
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
+                                            <a href="#" class="image"><img src="images/BumpPie_Thumbnail.gif" alt="Bump Pie Menu Project" /></a>
+                                            <h3>Bump Pie Menu</h3>
+                                            <p>仮想現実環境でのレイを引っ掛ける操作によって、高速かつ正確な選択を実現する円形メニューUIに関する研究。</p>
+                                            <ul class="actions">
+                                                <li><a href="#" class="button">More</a></li>
+                                            </ul>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/TTTV4_Thumbnail.jpg" alt="Taste/Olfactory Media Project" /></a>
+                                            <h3>Taste/Olfactory Media</h3>
+                                            <p>産地による味の違いの定量化や、パーソナル味覚提示デバイス、飲料の香りを再現する嗅覚提示デバイスに関する研究。</p>
+                                            <ul class="actions">
+                                                <li><a href="#" class="button">More</a></li>
+                                            </ul>
+                                        </article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
+                                            <a href="#" class="image"><img src="images/DroneUI_Thumbnail.jpg" alt="Drone UI Project" /></a>
+                                            <h3>Drone UI</h3>
+                                            <p>ドローン空撮におけるカメラ操作に重点を置いた「手でカメラ操作し足でドローン操縦する」UIに関する研究。</p>
+                                            <ul class="actions">
+                                                <li><a href="#" class="button">More</a></li>
+                                            </ul>
+                                        </article>
+                                        </div>
+                                </section>
 
-						</div>
-					</div>
+                        </div>
+                    </div>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+                <div id="sidebar">
+                        <div class="inner">
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+                            <nav id="menu">
+                                    <header class="major">
+                                        <h2>Menu</h2>
+                                    </header>
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html#projects">Projects</a></li>
+                                        <li><a href="publications.html">Publications</a></li>
+                                        </ul>
+                                </nav>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
-									</ul>
-								</nav>
+                            <section>
+                                    <header class="major">
+                                        <h2>Get in touch</h2>
+                                    </header>
+                                    <p>明治大学院 先端数理科学研究科 先端メディアサイエンス専攻 宮下研究室</p>
+                                    <ul class="contact">
+                                        <li class="icon solid fa-envelope"><a href="mailto:k.nobu00714@outlook.jp">k.nobu00714@outlook.jp</a></li>
+                                    </ul>
+                                </section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
+                            <footer id="footer">
+                                    <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                                </footer>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
+                        </div>
+                    </div>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+            </div>
 
-						</div>
-					</div>
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    </body>
 </html>

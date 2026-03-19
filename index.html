@@ -1,25 +1,25 @@
 <!DOCTYPE HTML>
 <html>
-	<style>
-    /* プロジェクト一覧の画像を一定の高さに揃える設定 */
-    #projects .posts article .image {
-        display: block;
-        height: 250px;             /* ここで画像の高さを固定します */
-        background-color: transparent;
-        /* 背景色をサイトに馴染ませたい場合は #ffffff の代わりに transparent と書いてください */
-    }
-
-    #projects .posts article .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;       /* これが「比率を保ったまま枠に収める」魔法の記述です */
-    }
-</style>
     <head>
         <title>Nobuhito Kasahara - Research</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* プロジェクト一覧の画像を一定の高さに揃える設定 */
+            #projects .posts article .image {
+                display: block;
+                height: 250px;             /* ここで画像の高さを固定します */
+                background-color: transparent;
+                /* 背景色をサイトに馴染ませたい場合は #ffffff の代わりに transparent と書いてください */
+            }
+
+            #projects .posts article .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;       /* これが「比率を保ったまま枠に収める」魔法の記述です */
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -40,7 +40,7 @@
                                     <div class="content">
                                         <header>
                                             <h1>Nobuhito Kasahara</h1>
-											<h1>笠原 暢仁</h1>
+                                            <h1>笠原 暢仁</h1>
                                             <p>Graduate Student at Meiji University, FMS</p>
                                         </header>
                                         <p>明治大学院 先端数理科学研究科 先端メディアサイエンス専攻 (FMS) 宮下研究室の大学院生です。
@@ -66,14 +66,14 @@
                                                 <p>Fitts' LawやSteering Lawを用いたポインティング動作の操作時間予測モデル、およびDual Gaussian Distributionモデルを用いたポインティング成功率予測モデルに関する研究。</p>
                                             </div>
                                         </article>
-										<article>
+                                        <article>
                                             <span class="icon solid fa-object-group"></span>
                                             <div class="content">
                                                 <h3>UI & UX</h3>
                                                 <p>より直感的で使いやすいUI、より快適なUXを目指す。特に、画面端・画面角における高速かつ正確なポインティングに着目した研究。</p>
                                             </div>
                                         </article>
-										<article>
+                                        <article>
                                             <span class="icon solid fa-vr-cardboard"></span>
                                             <div class="content">
                                                 <h3>Virtual Reality</h3>
@@ -95,47 +95,35 @@
                                         <h2>Projects</h2>
                                     </header>
                                     <div class="posts">
-										<article>
-                                            <a href="#" class="image"><img src="images/SkewedDualGaussian_Thumbnail.png" alt="Skewed Gaussian Project" /></a>
-                                            <h3>Skewed Dual Gaussian Distribution Model</h3>
-                                            <p>画面端・画面角付近におけるタッチポインティングの成功率を予測する数理モデルに関する研究。</p>
-                                            <ul class="actions">
-                                                <li><a href="#" class="button">More</a></li>
-                                            </ul>
-                                        </article>
-										<article>
-                                            <a href="#" class="image"><img src="images/BiasTrajectory_Thumbnail.png" alt="Bias Trajectory Project" /></a>
-                                            <h3>Trajectory-Based Tasks with Subjective Speed-Accuracy Bias</h3>
-                                            <p>ユーザの主観的な速度と精度のバイアスの影響を考慮したクロッシング・ステアリングの操作時間を予測する数理モデルに関する研究。</p>
-                                            <ul class="actions">
-                                                <li><a href="#" class="button">More</a></li>
-                                            </ul>
-                                        </article>
-										<article>
-                                            <a href="#" class="image"><img src="images/BumpPie_Thumbnail.gif" alt="Bump Pie Menu Project" /></a>
-                                            <h3>Bump Pie Menu</h3>
-                                            <p>仮想現実環境でのレイを引っ掛ける操作によって、高速かつ正確な選択を実現する円形メニューUIに関する研究。</p>
-                                            <ul class="actions">
-                                                <li><a href="#" class="button">More</a></li>
-                                            </ul>
-                                        </article>
+                                        
                                         <article>
-                                            <a href="#" class="image"><img src="images/TTTV4_Thumbnail.jpg" alt="Taste/Olfactory Media Project" /></a>
+                                            <a href="project-performance-modeling.html" class="image"><img src="images/SkewedDualGaussian_Thumbnail.png" alt="Performance Modeling Project" /></a>
+                                            <h3>Performance Modeling</h3>
+                                            <p>GUI操作時のユーザのパフォーマンスを予測するモデルに関する研究。Fitts' Law、Steering Lawの拡張や、Dual Gaussian Distribution Modelを用いた画面端・画面角でのタップ成功率予測などを扱っています。</p>
+                                            <ul class="actions">
+                                                <li><a href="project-performance-modeling.html" class="button">More</a></li>
+                                            </ul>
+                                        </article>
+
+                                        <article>
+                                            <a href="project-taste-olfactory-media.html" class="image"><img src="images/TTTV4_Thumbnail.jpg" alt="Taste and Olfactory Media Project" /></a>
                                             <h3>Taste/Olfactory Media</h3>
-                                            <p>産地による味の違いの定量化や、パーソナル味覚提示デバイス、飲料の香りを再現する嗅覚提示デバイスに関する研究。</p>
+                                            <p>人間の味覚や嗅覚を拡張・制御する新しいインタフェースの提案。カトラリー型味覚ディスプレイ「TTTV4」や、飲料に香りを付与する嗅覚メディア「AromaSynth」、カカオの味の再現手法に関する研究を行っています。</p>
                                             <ul class="actions">
-                                                <li><a href="#" class="button">More</a></li>
+                                                <li><a href="project-taste-olfactory-media.html" class="button">More</a></li>
                                             </ul>
                                         </article>
-										<article>
-                                            <a href="#" class="image"><img src="images/DroneUI_Thumbnail.jpg" alt="Drone UI Project" /></a>
-                                            <h3>Drone UI</h3>
-                                            <p>ドローン空撮におけるカメラ操作に重点を置いた「手でカメラ操作し足でドローン操縦する」UIに関する研究。</p>
+
+                                        <article>
+                                            <a href="project-ui-ux.html" class="image"><img src="images/BumpPie_Thumbnail.gif" alt="UI and UX Project" /></a>
+                                            <h3>UI & UX</h3>
+                                            <p>新しいコンピュータ環境における直感的なインタフェースと操作体験に関する研究。指先の変形を活用したVRインタラクション、VR用円形メニュー「Bump Pie Menu」、ドローン操縦UIなどを扱っています。</p>
                                             <ul class="actions">
-                                                <li><a href="#" class="button">More</a></li>
+                                                <li><a href="project-ui-ux.html" class="button">More</a></li>
                                             </ul>
                                         </article>
-                                        </div>
+
+                                    </div>
                                 </section>
 
                         </div>

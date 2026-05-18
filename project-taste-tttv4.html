@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>TTTV4 - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>TTTV4</h1>
+                            <p>一口ごとに味を提示するカトラリー型味覚ディスプレイ</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/PysWCOKQ7ZA" title="TTTV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>食事動作に自然に統合できる形状を目指し、据え置き型ではないパーソナルな味覚提示デバイスとしてTTTV4を設計した研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>食には栄養摂取だけでなく「味覚コンテンツ」としての側面がある。視聴覚コンテンツでは個人が好みのものを選べるパーソナルメディアが当たり前になってきたが、食においては同じ商品・同じ味を多くの人が楽しむ形が一般的なまま残っている。既存の味覚提示デバイス（TTTVシリーズ等）は味の出力性能に焦点を当てており、食事動作に統合した「食べながらの調味」や一般ユーザが日常で使う場面は想定されていなかった。</p>
+
+                        <h2>設計・実装</h2>
+                        <p>カトラリー（スプーン）型デバイスTTTV4は、5つのタンク（各5ml）・5つの圧電マイクロポンプ（SDMP306D）・M5StickC Plus 2制御ボードを搭載し、基本五味（甘・塩・うま味・酸・苦）に対応した味溶液を一口ごとに混合提示する。UIは2種類を実装した。（1）<strong>Direct Manipulation型</strong>：スライダーで基本五味の出力量を直接制御するGUI。（2）<strong>Interface Agents型</strong>：LLM（GPT-4o）が言語・画像入力から味配合を推定するシステム。「よりフルーティーに」「カニの風味を強く」といった曖昧な入力にも対応した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>官能評価（n=5）として、牛乳をクラムチャウダーとイチゴミルクに変化させるレシピをTTTV4で出力した。「同じカップに入った牛乳を掬って味が変わるのが面白い」「料理名を聞けば分かる」といったフィードバックが得られ、一口ごとに味を変化させられることを確認した。一方、電気的・機械的遅延0.8〜1.1秒＋ポンプ動作時間0.7〜7.0秒で合計1.5〜8.1秒の出力遅延があり、食べながら使うには速度面の課題が残る。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>一口ごとの調味では、料理全体の味を変えずに試せるため、失敗しても次の一口でやり直せる。この「気軽に試せる」という点はこれまでの味覚提示デバイスにはなかった特徴だと考えている。今後の課題は、より高速なポンプの採用、出力タイミングをセンサで調整する仕組みの開発、味覚閾値に基づく濃度の個人設定などである。インタフェースも人によって好みが異なることがわかり、その点も引き続き検討したい。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://dl.acm.org/doi/10.1145/3746058.3758452"><strong>TTTV4: Cutlery-Type Taste Display Toward Personal Taste Media</strong></a></li>
+                            <li><a href="https://www.wiss.org/WISS2024Proceedings/data/paper/8.pdf"><strong>TTTV4：一口ごとに味を提示する味覚のパーソナルメディア</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-taste-olfactory-media.html" class="button">Back to Taste/Olfactory Media</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-taste-olfactory-media.html">Taste/Olfactory Media</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cacao Taste Reproduction - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Cacao Taste Reproduction</h1>
+                            <p>産地差の味覚特徴を定量化し、純物質で再現する手法</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/s8HxRz7KCz0" title="Cacao Taste Reproduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>産地ごとのカカオ風味差を分析し、純物質配合により味覚再現を試みることで、味設計の再現性向上を目指した研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>カカオは産地や品種によって異なる風味を持ち、希少なクリオロ種（ペルー産等）は単価が約23,400円/kgと高額なため、入手できるユーザーが限られている。一方、比較的安価なコートジボワール産カカオ（約2,920円/kg）を使いながら、高価な産地の風味を味溶液の混合で再現できれば、食体験の選択肢を広げられる。本研究では味覚センサを用いて産地間の味の差を定量化し、純物質の配合でその差を埋める手法を検討した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>味覚認識装置TS-5000Zを用いてコートジボワール産・ペルー産カカオドリンクの苦味・渋味・塩味・酸味・甘味の差を定量化した。測定結果をもとに、味の加算（酢酸・乳酸・プロピオン酸・塩化ナトリウム・グルタミン酸・テオブロミンの組み合わせで酸味・塩味・旨味・苦味を調整）とマスキング効果（グルタミン酸ナトリウムで苦味を軽減）を組み合わせたレシピを構築した。レシピは食品・味覚の専門家との共同作業で最適化した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>最終レシピを再度味覚センサで測定したところ、苦味・渋味に微差が見られた以外、すべての項目で高い再現度が確認された。特に興味深かったのは、酸味を加えることで旨味がマスキングされ、センサ測定でもその効果が測定できた点である。スイーツ批評家による官能評価でも「ほぼ一致している」との評価が得られた。追加する調味物質のコストは1杯あたり約109円に収まる見通しとなった。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>単に基本味を足すだけでなく、マスキング効果を活用することでより精細な風味表現ができることがわかった。今後はTTTV3のような調味家電と組み合わせることで、産地別のカカオ飲料を手軽に提供するシステムへの展開が考えられる。白ワインでの赤ワイン風味再現などへの試みも始めており、原材料に依存しない味覚表現の可能性を引き続き探っていきたい。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="http://id.nii.ac.jp/1001/00227413/"><strong>産地の異なるカカオの味の違いを定量化し純物質で再現する手法</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-taste-olfactory-media.html" class="button">Back to Taste/Olfactory Media</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-taste-olfactory-media.html">Taste/Olfactory Media</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

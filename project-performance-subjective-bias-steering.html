@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Subjective Bias and Steering Models - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Subjective Bias and Steering Models</h1>
+                            <p>主観的速度-精度バイアスを考慮した軌跡ベースタスク評価</p>
+                        </header>
+
+                        <span class="image main"><img src="images/BiasTrajectory_Thumbnail.png" alt="Subjective Bias and Steering Models" /></span>
+
+                        <h2>概要</h2>
+                        <p>ユーザの戦略差によって生じる主観的な速度-精度バイアスをモデル化し、より公平な比較指標を設計する研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>Fitts則研究でのポインティングタスクでは、スループット（TP）はデバイスやユーザの主観的な速度-精度バイアスから独立した性能指標として広く使われている。しかし、軌跡をたどるステアリングタスクやクロッシングタスクに対応する指標の定義・計算方法は十分に整理されていなかった。本研究ではそれぞれのタスクにおける有効パラメータの使い方を実験で検討した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>ステアリング研究では、直線・円・サイン波の3形状のパスを用いた3つの実験を実施した。有効幅W<sub>e</sub>（軌跡の96%を包含する幅）と有効振幅A<sub>e</sub>（軌跡の総長）を計算し、これらをFitts則モデルに適用してスループットを定義した。クロッシング研究では、ターゲット交差面が向かい合う条件と横並びの条件の2実験を行い、有効パラメータの妥当性を検証した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>ステアリング・クロッシングいずれも、有効パラメータ（W<sub>e</sub>・A<sub>e</sub>）をFitts則モデルに適用することで、速度重視・精度重視・バランスの混在バイアス条件でのデータ適合が改善した。ただし、低難易度でバリスティック運動が可能なタスクではTPが難易度間で不安定になるケースも見られた。これはバリスティック運動後に生じる修正フェーズの差が影響していると考えられる。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>ステアリングおよびクロッシングタスクの性能評価では、有効パラメータ（W<sub>e</sub>・A<sub>e</sub>）を用いたスループット計算が有効だった。タッチ・ペン・マウスなど異なる入力デバイスや、様々なユーザグループへの適用を今後検討したい。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://ipsj.ixsq.nii.ac.jp/records/2004562"><strong>連続的軌跡ベースタスクにおけるユーザの主観的な速度と精度のバイアスを考慮したモデルと性能評価指標に関する研究</strong></a></li>
+                            <li><a href="https://www.ipsj.or.jp/event/fit/fit2024/abstract/data/html/event/event_TCS7-1.html"><strong>ステアリングタスクにおける主観的な速度と精度のトレードオフの影響を考慮するためのEffective ParametersとThroughput</strong></a></li>
+                            <li><a href="https://doi.org/10.1145/3613904.3642084"><strong>Better Definition and Calculation of Throughput and Effective Parameters for Steering to Account for Subjective Speed-accuracy Tradeoffs</strong></a></li>
+                            <li><a href="https://doi.org/10.1145/3544549.3585817"><strong>Throughput and Effective Parameters in Crossing</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-performance-modeling.html" class="button">Back to Performance Modeling</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-performance-modeling.html">Performance Modeling</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

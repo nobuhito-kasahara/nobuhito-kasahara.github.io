@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Edible Lenticular Lens - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Edible Lenticular Lens</h1>
+                            <p>可食素材によるレンチキュラーレンズ作製手法</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/qm-0aqsmEVc" title="Edible Lenticular Lens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>可食素材で視覚効果をもつレンチキュラーレンズを作製し、食体験と視覚表現を接続する手法を提案する研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>レンチキュラーレンズは視角によって画像が切り替わる光学効果を持ち、プロジェクタやHMDなしで食材の見た目を変化させられる。これを可食素材で実現できれば、ゼリーを開く前まで中身が見えないといった演出や、見る角度によって色が変わる食品など、食体験に視覚表現を組み合わせた新しい可能性が広がる。本研究では可食素材によるレンチキュラーレンズの作製手法を検討した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>素材はゲランガム（gellan gum）をSuntoryのヨーグリーナに溶解させて使用した。2つの製法を提案した。<strong>モールド成形法：</strong>40 LPIの従来レンチキュラーレンズを用いて食品グレードシリコンで型を作成し、ゲランガム5g+ヨーグリーナ250gの混合液を流し込み20°C・30分で固化（色変化効果）。消失効果には65mm立方体のシリコン型を使用（2時間固化）。<strong>ナイフカット法：</strong>SLA 3Dプリンタ（ELEGOO SATURN 2）で20 LPIのレンチキュラーレンズ逆構造を持つナイフを造形し、食品グレード洗浄可能レジン（ekimate clear）を使用。ゼリーキューブをナイフで切断してレンズ構造を作成した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>ゲランガム溶液の屈折率（IOR）は1.3433（21.4°Cで測定）。色変化効果は赤・青の画像で確認できたが、ゲランガムの柔らかさによりピッチずれが生じており、配合調整で改善の余地がある。光線追跡シミュレーションで最適IORを1.3448と特定し、消失効果を確認した（黄色い桃が前面からは見えず後面からは可視）。ナイフカット法はモールド成形法より作業が速い分、手動切断のため精度はやや劣る。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>2つの製法でレンチキュラーレンズを可食素材で作れることを確認した。ゲランガムの配合調整や3Dプリント型の精度向上など改善点はまだあるが、食体験に光学的な演出を加える手法として面白い方向だと考えている。今後はレンズ厚・ピッチを変えながら設計できるシステムの開発や、他の食材への展開も試みたい。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://dl.acm.org/doi/10.1145/3588028.3603675"><strong>Fabrication of Edible lenticular lens</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-taste-olfactory-media.html" class="button">Back to Taste/Olfactory Media</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-taste-olfactory-media.html">Taste/Olfactory Media</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

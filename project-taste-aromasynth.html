@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>AromaSynth - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>AromaSynth</h1>
+                            <p>飲料に香りを付与して風味体験を拡張する嗅覚メディア</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/q59rcONa3IA" title="AromaSynth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>飲料そのものを変更せず香りを重畳することで、フレーバー知覚を拡張する嗅覚インタフェースを提案する研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>味の知覚において香りは重要な要素であり、嗅覚が風味全体を大きく左右する。TTTVシリーズのような味溶液混合デバイスは基本五味の操作に着目してきたが、香りを合わせて操作する手法はほとんど開発されていなかった。また既存の香料ディフューザーは人が香りを嗅ぐ用途が中心で、飲料に直接香料を滴下して風味を変化させるというアプローチは一般ユーザ向けにあまり行われていなかった。</p>
+
+                        <h2>設計・実装</h2>
+                        <p>AromaSynthは20種類の香料タンクと小型チューブポンプ（RP-QⅢ A1.5S-3Z-DC3V）を搭載し、スマートフォンのスライダーUIで香料の調合量を指定すると、BLE（Bluetooth Low Energy）経由でM5StickC Plus2に送信されて飲料に滴下される。頻繁に使うレシピはQRコードとして保存・共有でき、スマートフォンに表示したQRコードを本体のリーダーで読み取るだけで再現できる。香料はコーヒーを対象に12種類の香料製剤を開発し、9産地の風味を表現した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>20個のポンプ全数について駆動時間ごとの出力量を測定した。5000ms条件では変動係数（CV）がほとんどのポンプで0.001〜0.014と安定しており、再現性の高い出力が確認された。500ms条件ではCVが大きくなるが、これは出力量が極めて少ないことによる相対的な影響であり、ポンプ自体の不安定性を直接示すものではない。ポンプ間に個体差があるため、精度向上には個体ごとのキャリブレーションが有効と考えられる。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>現状では20種の香料が上限で、すべての香りを網羅することはできない。温度管理にも対応しておらず、アイス・常温・ホットといった飲料温度によって香料の揮発プロファイルが変わる点は課題になっている。UIについても、より直感的な操作感を目指した設計の改善が必要だ。今後はAIとの対話で風味をカスタマイズする仕組みや、Coffee Questなどの外部アプリとのQRコード連携も検討している。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://ipsj.ixsq.nii.ac.jp/records/2003709"><strong>AromaSynth: 飲料に多様な香りを付与する嗅覚メディア</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-taste-olfactory-media.html" class="button">Back to Taste/Olfactory Media</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-taste-olfactory-media.html">Taste/Olfactory Media</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

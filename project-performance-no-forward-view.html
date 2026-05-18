@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Modeling Steering Time without Forward View - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Modeling Steering Time without Forward View</h1>
+                            <p>ユーザの正面視野外条件を考慮したステアリング時間モデル</p>
+                        </header>
+
+                        <span class="image main"><img src="images/SteeringAngled.gif" alt="Modeling Steering Time without Forward View" /></span>
+
+                        <h2>概要</h2>
+                        <p>ユーザがウィンドウ正面に位置しない条件で発生する操作特性の変化を捉え、ステアリング時間を予測する研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>Fitts則やSteering Lawは、ユーザがUIの正面に座っている状況を前提としている。しかしVR空間や大型ディスプレイでは、ユーザがウィンドウに対して斜め方向から操作する場面が頻繁に起こる。このような「オフアクシス」条件での操作時間モデルはほとんど検討されておらず、斜めから見たときに経路の幅や長さが視覚的に変形することが操作性にどう影響するかを調べた。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>VR空間内に配置した円形ステアリング経路を用いて実験を行った。ユーザからウィンドウへの角度AG = {0°, 20°, 40°, 60°}の4条件、3種類の経路幅Wと3種類の経路長Aを組み合わせた計36条件で操作時間を測定した（参加者12名、合計3888試行）。見かけの経路幅の非線形変化を考慮したモデル（式3ベース）と、幅が線形に変化すると近似したモデル（式2ベース）の2つを導出し、実測データへの適合度を比較した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>AG=0°の平均操作時間は1.43秒で、角度が大きくなるにつれて操作時間・エラー率ともに増加した（0°と60°の間に有意差あり）。実験後のインタビューでも60°条件は難しかったとの回答があった。提案した2つのモデルはいずれもR² > 0.988と高い適合度を示した。一方、角度条件を混在させてSteering LawのIDをそのまま使うとR² = 0.904に低下し、角度を無視したモデルでは精度が落ちることが確認された。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>ユーザが正面にいない場合は、描画上の経路幅ではなく見かけ上の幅と長さを使って難易度指標を計算すべきという結論が得られた。2つのモデルの精度は近いが、線形近似モデルの方がわずかに高い結果となった。今後は実際のUI設計において、ディスプレイの配置角度に応じた操作難易度の事前評価への応用が考えられる。また今回は入力デバイスとしてVRコントローラを用いており、タッチやペン操作での検証も課題になる。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://ipsj.ixsq.nii.ac.jp/records/2000619"><strong>ウィンドウ正面にユーザがいない場合のステアリング時間のモデル化</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-performance-modeling.html" class="button">Back to Performance Modeling</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-performance-modeling.html">Performance Modeling</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

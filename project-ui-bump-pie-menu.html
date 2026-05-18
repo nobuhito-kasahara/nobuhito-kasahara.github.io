@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Bump Pie Menu - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Bump Pie Menu</h1>
+                            <p>レイを引っ掛ける感覚を用いたVR円形メニュー</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/7C0ETtz5aAw" title="Bump Pie Menu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>レイ操作に手応えを与えるメタファを導入し、VR空間でのメニュー選択を高速かつ確実にすることを狙ったUI研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>VR・AR等の3次元仮想環境では、コントローラや手が空中で自由に動くため、ターゲットを外れないよう腕を固定しながら選択動作を行う必要があり容易ではない。デスクトップのマウス操作は机という平面に支えられているため安定しており、この安定性のなさがVRでの選択を難しくしている。</p>
+                        <p>2D GUIでは、画面角や画面端といったカーソル侵入不可領域に接するターゲットは高速かつ正確に選択できることが知られている（弾道運動による実質無限大ターゲット効果）。この利点を3次元に応用し、「レイを引っ掛ける」感覚で安定してターゲットを選択できる円形メニューを提案した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>Bump Pie Menuでは、3次元空間のメニュー平面に当たり判定付きの円形外壁と、選択領域を分割する円形の引っ掛かりを設置した。コントローラのレイはこのオブジェクトを通過するが、レイとメニュー平面の交点に表示されるカーソルが壁と衝突して凹みに留まる。ユーザはカーソルを目的の凹みへ向けて直線的に動かし、次いで引っ掛かりの角に向かって外壁を滑らせるだけでよく、選択動作を2段階に分けて行える。選択項目数は16個。</p>
+
+                        <h2>評価結果</h2>
+                        <p>既存手法Pie Menuと比較するユーザ実験（4名、男性2名・女性2名、640試行：16試行×10セット×4名）を実施した。エラー率の平均値は既存手法8.44%に対し提案手法2.03%と約4分の1に低下し、全参加者でエラー率が低下した。操作時間は既存手法1.23秒に対し提案手法1.33秒と約0.1秒増加したが、1名では逆に短縮された。レイの移動速度は提案手法の方が速く、タスク後半でも減速しないことから、コントローラを減速させずに選択できていることがわかった。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>最初にレイの方向を間違えると別のターゲットに引っ掛かり修正が難しくなる点が課題として挙がった。引っ掛かりの大きさや形を動的に変化させる改善が考えられる。ハンドトラッキングや直接操作への展開、触覚フィードバックとの組み合わせ、視線ポインティングといったより不安定な操作手法への応用も今後の方向として考えている。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://www.wiss.org/WISS2023Proceedings/data/1-B04.pdf"><strong>Bump Pie Menu : VR 環境で「レイを引っ掛けて」ターゲットを選択する円形メニュー</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-ui-ux.html" class="button">Back to UI & UX</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-ui-ux.html">UI & UX</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

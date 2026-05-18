@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Preview-Based Velocity Control - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Steering Models with Preview-Based Velocity Control</h1>
+                            <p>曲率が変化する経路に対するステアリング時間予測モデル</p>
+                        </header>
+
+                        <span class="image main"><img src="images/PreviewModel_Thumbnail.png" alt="Preview-based Velocity Control" /></span>
+
+                        <h2>概要</h2>
+                        <p>ユーザが進行方向の先を見越して速度制御するという仮説をモデルに導入し、従来のSteering Lawでは表現しにくかった曲率変化の影響を説明する研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>GUIにおいてカーソルをパス（経路）に沿って動かすステアリング操作は、階層メニューのナビゲーションや描画など基本的な場面で使われる。従来のSteering Lawはパスの局所的な幅を積分して移動時間を推定するが、コーナーや曲率が変化するパスでは精度が落ちることがある。ドライバーが前方のカーブを見て速度を落とすように、人間もパスの先を見ながら速度を調整しているのではないかという仮説に基づいて新たなモデルを検討した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>パスの前方にある幾何的特性（曲率等）を視覚的制約として速度制御に組み込む先読み速度制御（Preview-Based Velocity Control）モデルを提案した。コーナー曲率が大きいほど手前で減速する挙動をモデル化し、パラメータを必要としない簡易版も導出した。既存のSteering Lawおよびその拡張モデルとの比較実験を行った。</p>
+
+                        <h2>評価結果</h2>
+                        <p>曲線を含むパスにおいて提案モデルはadjusted R² = 0.983を達成し、既存モデルよりも高い精度を示した。パラメータチューニングなしの簡易版でもadjusted R² = 0.972と近い水準を保っており、実用的な難易度指標として使いやすいことがわかった。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>今回はコーナーを含むパス形状を対象としたが、3次元空間でのステアリングや、より複雑なパス形状（複数曲率の連続コーナーなど）への対応は今後の課題になる。階層メニューやツールバーの形状設計の難易度推定にも応用できると考えている。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li>
+                                <a href="https://doi.org/10.1145/3772363.3798500"><strong>Deriving Steering Time Models for Paths with Corners of Varying Curvature Based on Preview-Based Velocity Control</strong></a><br>
+                                Koyo Motoe, Nobuhito Kasahara, Shota Yamanaka, Wolfgang Stuerzlinger, and Homei Miyashita.<br>
+                                CHI EA 2026, Article 204, 1-6.
+                            </li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-performance-modeling.html" class="button">Back to Performance Modeling</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-performance-modeling.html">Performance Modeling</a></li>
+                        </ul>
+                    </nav>
+
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

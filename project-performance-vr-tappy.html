@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>VR Tappy - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>VR Tappy</h1>
+                            <p>VRレイキャスト選択の成功率推定と可視化ツール</p>
+                        </header>
+
+                        <span class="image main"><img src="images/VRTappy_Thumbnail.png" alt="VR Tappy" /></span>
+
+                        <h2>概要</h2>
+                        <p>VR空間におけるレイキャスト選択の成功率を推定し、UI設計やターゲット配置の意思決定に活用できるツールを目指した研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>XRデバイスの普及により3次元空間でのインタラクションが一般化する中、HCI研究では3D空間のポインティングに関する知見が蓄積されてきた。しかし、研究で得られた指針を実際のUI開発に取り入れるための実用的なツールは少なく、研究と開発の現場に乖離があった。VR環境でのレイキャスト選択は、ターゲットが小さい・遠いほど精度が低下するという課題があるが、これを定量的に把握できる開発者向けのツールがなかった。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>VR環境に特化した終点分布モデルEDModelを基に、レイキャストによるオブジェクト選択の成功率を推定するモデルを構築した。このモデルは移動時間を予測するFitts則とは異なり、成功率に着目する。2D UI分析ツールTappyと同様の形で提供することを目標に、Unity開発ツール内でオブジェクトの選択成功率をヒートマップとして可視化するシステムを実装した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>モデルの有効性を実験で確認した後、VR開発者に本ツールを試用してもらいフィードバックを収集した。「ターゲット配置を決めるときに参考になる」「どの要素が選びにくいかが一目でわかる」といった反応が得られ、実際の開発作業での使い道があることを確認した。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>本研究はHCI研究の成果をVR開発に持ち込むための試みで、ツールとしての完成度はまだ途上にある。今後はユーザが動きながら選択する動的な場面への対応、ハンドトラッキングなど別の選択手法への拡張、およびUnity以外の開発環境への移植が課題になる。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://www.wiss.org/WISS2025Proceedings/data/paper/17.pdf"><strong>VR環境におけるレイキャストによるオブジェクトの選択成功率推定ツールの提案</strong></a></li>
+                            <li><a href="https://arxiv.org/abs/2601.03522"><strong>A Tool for Estimating Success Rates of Raycasting-Based Object Selection in Virtual Reality</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-performance-modeling.html" class="button">Back to Performance Modeling</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-performance-modeling.html">Performance Modeling</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

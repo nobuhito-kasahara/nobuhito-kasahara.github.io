@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Fingertip Deformation in VR - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Fingertip Deformation in VR</h1>
+                            <p>指先変形を利用したフリーハンドVRインタラクション</p>
+                        </header>
+
+                        <span class="image main"><img src="images/VRFingertip_Thumbnail.png" alt="Fingertip Deformation in VR" /></span>
+
+                        <h2>概要</h2>
+                        <p>指先の視覚的・触覚的変形表現を利用し、フリーハンド操作の精度と操作感を向上させるUI手法の研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>VR環境でのフリーハンドインタラクションでは、物理的な触覚フィードバックがないため深度知覚が難しく、ボタン押下や軌跡追跡の精度が落ちやすい。仮想手の指先を視覚的に変形させる表現（疑似触覚：pseudo-haptics）を導入することで、どれだけ押し込んでいるかという深度情報をユーザに伝え、操作性を改善できるのではないかと考えた。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>Unity VR環境上で、仮想手がUI要素に接触した際に指先を視覚的に変形させるシステムを実装した。変形の大きさは押し込み量に対応しており、これが疑似触覚として機能する。ポインティングタスク（ボタン選択）とステアリングタスク（経路追跡）の2種類の実験を行い、変形あり・なし条件を比較した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>ポインティングタスクでは指先変形により操作時間が短縮した。ステアリングタスクでは経路からの逸脱量が減少した。主観評価でも、疑似触覚の感覚・空間知覚・全体的な体験感において変形あり条件の評価が高く、視覚的な変形表現が操作感の改善につながることが確認された。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>指先変形は追加のハードウェアなしで実装でき、既存のVR開発環境に取り込みやすい。一方で、長時間の使用で違和感が生じないかや、指の形状の個人差への対応は今後確認が必要だ。ハプティクスデバイスと組み合わせた多感覚フィードバックへの発展も面白い方向だと考えている。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://dl.acm.org/doi/10.1145/3756884.3765975"><strong>Enhancing Freehand VR Interaction Using Fingertip Deformation on User Performance</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-ui-ux.html" class="button">Back to UI & UX</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-ui-ux.html">UI & UX</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

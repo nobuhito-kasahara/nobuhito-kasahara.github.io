@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Drone UI - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main iframe {
+                width: 100%;
+                max-height: 500px;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Drone UI</h1>
+                            <p>手でカメラ操作し足で機体操縦するドローンインタフェース</p>
+                        </header>
+
+                        <span class="image main"><iframe style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/YMsFtw6ty9Y" title="Drone UI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+
+                        <h2>概要</h2>
+                        <p>空撮用途における操作優先度に着目し、手と足に役割分担させることでドローン操縦の直感性と効率を高める研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>ドローンを使った空撮では、機体の移動（操縦）とカメラの向き・ズーム（操作）を同時に行う必要があるが、どちらも手に持ったコントローラで操作すると入力が混同しやすい。2名のオペレータで分担する製品もあるが、高度な連携が求められる場面では容易でない。1名のオペレータが自由なカメラワークで空撮できるUIを目指して、手と足に役割を分けるアプローチを検討した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>椅子に取り付けた力覚センサ4つに紐を介して両足の爪先・踵の張力を検出し、その組み合わせで仮想ドローンの前進・後進・上昇・回転などを制御する。手はカメラ型ケースに収めたTouchコントローラを持ち、デバイスの向きでカメラの向きを、レンズ部分の回転でズームを制御する。HMDにはドローン搭載の全天球カメラ映像が表示される。プロトタイプはUnity上の仮想空間で実装した。</p>
+
+                        <h2>評価結果</h2>
+                        <p>情報系の大学生6名（男女各3名）を対象に、動き回るドラゴンを10分間追いかけて撮影するタスクで評価した。「操縦のしやすさ」「思い通りに操縦できるか」の平均評価値はいずれも+1.83（7段階：-3〜+3）、「カメラ操作のしやすさ」は+2.67と高かった。「操縦と操作を混同したか」の項目は-2.67と低く、混同が起きにくいことが確認された。参加者は開始から10分以内に足による操縦に慣れる様子が観察された。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>手と足に役割を分けることで操縦と操作の混同が抑えられ、カメラ操作に集中しやすくなることがわかった。一方で「回転が遅い」「足が疲れる」「下降しながら前進できない」といった課題も挙がった。今回は仮想空間でのみ検証しており、実機ドローンへの応用可能性や既存コントローラとの定量比較は今後の課題になる。足でドローンを操縦しながら手でロボットアームを操作するような応用も考えられる。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="http://id.nii.ac.jp/1001/00219410/"><strong>手でカメラ操作し足で操縦するドローンUI</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-ui-ux.html" class="button">Back to UI & UX</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-ui-ux.html">UI & UX</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

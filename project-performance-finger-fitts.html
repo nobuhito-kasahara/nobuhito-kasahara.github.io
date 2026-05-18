@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Subjective Bias and Finger-Fitts Models - Nobuhito Kasahara</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .image.main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Nobuhito Kasahara</strong> Research</a>
+                        <ul class="icons">
+                            <li><a href="https://github.com/nobuhito-kasahara" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </header>
+
+                    <section>
+                        <header class="main">
+                            <h1>Subjective Bias and Finger-Fitts Models</h1>
+                            <p>主観的バイアス下でのFinger-Fittsモデル検証</p>
+                        </header>
+
+                        <span class="image main"><img src="images/FFitts_Thumbnail.png" alt="Subjective Bias and Finger-Fitts Models" /></span>
+
+                        <h2>概要</h2>
+                        <p>速度重視・精度重視の戦略差がある条件でFinger-Fittsモデルがどの程度妥当かを検証し、比較可能性を高める研究です。</p>
+
+                        <h2>研究背景</h2>
+                        <p>Finger-Fitts法則（FFitts law）は、指タッチポインティングにおける指の太さや身体的な不確実性を考慮してFitts則を拡張したモデルであり、速度-精度バイアスを正規化するために提案された。しかし、複数の主観的バイアス（速度重視・精度重視・バランス）を混在させた条件でどの程度バイアスを正規化できるかを検証した実験は少なかった。本研究では実験を通じてこの点を検証した。</p>
+
+                        <h2>手法・実装</h2>
+                        <p>1D-barおよび2D-circularターゲットを対象に、速度重視・精度重視・バランスの3つのバイアス条件でタップ実験を実施した。FFittsモデルの複数バリアント（Ko et al.の精緻化モデルを含む）と有効幅法（effective width method）の組み合わせを比較した。レイキャストポインティングの別データセットについても再分析を行った。</p>
+
+                        <h2>評価結果</h2>
+                        <p>タッチ操作の不確実性を自由パラメータで表現するKo et al.の精緻化FFittsモデルに有効幅（effective width）を組み合わせた条件が、バイアス正規化において最もよい結果を示した。スループットのばらつきが抑えられ、異なるバイアス条件間での比較がしやすくなった。レイキャストデータセットの再分析でも同様の傾向が見られた。</p>
+
+                        <h2>考察・今後</h2>
+                        <p>デバイス比較やユーザグループ比較を行う実験では、Ko et al.モデルと有効幅の組み合わせを使うとよいだろう。ペンや視線など他の入力モダリティへの適用や、3Dポインティングへの展開も今後の課題になる。</p>
+
+                        <h2>Publications</h2>
+                        <ul>
+                            <li><a href="https://dl.acm.org/doi/abs/10.1145/3676532"><strong>Verifying Finger-Fitts Models for Normalizing Subjective Speed-Accuracy Biases</strong></a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="project-performance-modeling.html" class="button">Back to Performance Modeling</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <nav id="menu">
+                        <header class="major"><h2>Menu</h2></header>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="project-performance-modeling.html">Performance Modeling</a></li>
+                        </ul>
+                    </nav>
+                    <footer id="footer">
+                        <p class="copyright">&copy; Nobuhito Kasahara. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
